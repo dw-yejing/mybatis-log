@@ -1,19 +1,10 @@
-#spring:
-#  datasource:
-#    driver-class-name: org.h2.Driver
-#    url: jdbc:h2:~/test;AUTO_SERVER=TRUE
-#    username: sa
-#    password:
-
-
 server:
   port: 8081
 
 spring:
+  h2:
+    console:
+      enabled: true
+
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/srmis?useSSL=false&serverTimezone=UTC
-    username: root
-    password: root
-mybatis:
-  mapper-locations: classpath*:/mapper/**/*.xml
+    url: jdbc:h2:mem:user_test

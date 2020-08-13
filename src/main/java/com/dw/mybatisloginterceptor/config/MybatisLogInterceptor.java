@@ -10,8 +10,6 @@ import org.apache.ibatis.mapping.ParameterMapping;
 import org.apache.ibatis.plugin.*;
 import org.apache.ibatis.session.ResultHandler;
 import org.springframework.stereotype.Component;
-import org.springframework.util.ObjectUtils;
-import org.springframework.util.StringUtils;
 
 import java.sql.Statement;
 import java.util.List;
@@ -22,6 +20,7 @@ import java.util.Properties;
         @Signature(type = StatementHandler.class, method = "query", args = { Statement.class, ResultHandler.class})
 })
 @Slf4j
+@Component
 public class MybatisLogInterceptor implements Interceptor {
     private JexlEngine engine = new Engine();
 

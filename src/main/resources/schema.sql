@@ -1,0 +1,1 @@
+create table IF NOT EXISTS user_info(id varchar (255), name varchar (255), age varchar (255), gender varchar (255), money decimal (19,2), created_By varchar (255), created_Time datetime);
